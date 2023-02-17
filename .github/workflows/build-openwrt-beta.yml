@@ -72,7 +72,7 @@ jobs:
 
     - name: 读取脚本设置
       run: |
-        git clone --depth 1 -b main https://github.com/281677160/common ${GITHUB_WORKSPACE}/build/common
+        git clone --depth 1 -b main https://github.com/maglcal/GXNAS-AutoBuild-OpenWrt-common ${GITHUB_WORKSPACE}/build/common
         mv -f ${GITHUB_WORKSPACE}/build/common/*.sh ${GITHUB_WORKSPACE}/build/${{matrix.target}}/
         chmod -R +x ${GITHUB_WORKSPACE}/build
         source ${GITHUB_WORKSPACE}/build/${{matrix.target}}/common.sh && Diy_repo_url
